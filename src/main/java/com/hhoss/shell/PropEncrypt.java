@@ -1,6 +1,6 @@
 package com.hhoss.shell;
 
-import com.hhoss.util.crypto.DESCoder;
+import com.hhoss.code.crypto.DESCoder;
 
 
 public class PropEncrypt {
@@ -22,7 +22,7 @@ public class PropEncrypt {
 
 	public static void main(String[] args) {
 		try {
-			String str = encrypt(args[0]);
+			String str = encrypt(args.length>0?args[0]:"testPass1253");
 			System.out.println("密文:\t" + str);
 			System.out.println("解密:\t" + decrypt(str));
 		} catch (Exception e) {
