@@ -2,7 +2,7 @@ package com.hhoss.lock;
 
 import java.util.Date;
 
-import com.hhoss.data.Item;
+import com.hhoss.mold.Item;
 
 public class LockVO extends Item<LockVO> {
 	private static final long serialVersionUID = -3416878797783121918L;

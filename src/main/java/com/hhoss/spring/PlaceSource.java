@@ -14,10 +14,10 @@ import org.springframework.util.CollectionUtils;
 
 import com.hhoss.conf.ResHolder;
 
-public class PlaceHolder extends PropertyPlaceholderConfigurer {
+public class PlaceSource extends PropertySourcesPlaceholderConfigurer  {
 	private Resource[] locations;
 	
-	public PlaceHolder(){		
+	public PlaceSource(){		
 		setIgnoreUnresolvablePlaceholders(true);//set default as true;
 		setOrder(getOrder()-1);
 	}

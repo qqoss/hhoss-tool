@@ -7,10 +7,12 @@ import org.slf4j.spi.LocationAwareLogger;
 import ch.qos.logback.core.CoreConstants;
 
 import com.hhoss.jour.LoggerFactory;
+import com.hhoss.lang.Classes;
 import com.hhoss.proxy.ProxyUtil;
 public abstract class Logger implements LocationAwareLogger {	
 	public static Logger get() {
-		return ProxyUtil.getObject(LoggerFactory.refLogger(), Logger.class);
+	  return get(Classes.caller().getName());
+      //return ProxyUtil.getObject(LoggerFactory.refLogger(), Logger.class);
 	}
 	public static Logger get(String name){
 		return ProxyUtil.getObject(LoggerFactory.getLogger(name), Logger.class);

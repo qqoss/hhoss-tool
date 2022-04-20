@@ -1,10 +1,10 @@
-package com.hhoss;
+package com.hhoss.spring;
 
 import java.lang.reflect.Method;
 
-import com.hhoss.spring.SpringBeans;
+import com.hhoss.Logger;
 
-public class Invoke {
+public class Invoker {
 	private static final Logger logger = Logger.get();
 
 	public static void main(String[] args) throws Exception {
